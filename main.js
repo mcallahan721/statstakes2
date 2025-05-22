@@ -1,1 +1,1 @@
-console.log('StatStakes app script loaded');
+console.log('StatStakes app fully built and loaded.');
