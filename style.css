@@ -1,13 +1,24 @@
 
 body {
   font-family: sans-serif;
-  background-color: #f4f4f4;
+  background: #f4f4f4;
   padding: 2rem;
 }
-#app h1 { color: #222; }
+h1 {
+  margin-bottom: 2rem;
+}
 button {
   margin-left: 1rem;
-  padding: 0.3rem 0.6rem;
+  padding: 0.3rem 0.7rem;
   font-size: 0.9rem;
   cursor: pointer;
+}
+table {
+  margin-bottom: 2rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
 }
