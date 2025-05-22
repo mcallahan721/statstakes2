@@ -1,1 +1,13 @@
-body { font-family: sans-serif; background: #f9fafb; padding: 2rem; }
+
+body {
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  padding: 2rem;
+}
+#app h1 { color: #222; }
+button {
+  margin-left: 1rem;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}

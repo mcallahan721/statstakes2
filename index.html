@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StatStakes</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root">
-      <h1>🏈 StatStakes: Fantasy Athlete Stock Market</h1>
-      <p>This version simulates the full build output with all MVP features included.</p>
-      <ul>
-        <li>✅ Buy/sell athlete shares</li>
-        <li>✅ Track your portfolio</li>
-        <li>✅ Reset with localStorage</li>
-      </ul>
-    </div>
-    <script src="main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StatStakes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>📈 StatStakes: Fantasy Athlete Stock Market</h1>
+    <p>Buy and sell shares of NFL players. Track your portfolio.</p>
+    <div id="market"></div>
+    <div id="portfolio"></div>
+    <button onclick="resetPortfolio()">🔁 Reset Portfolio</button>
+  </div>
+  <script src="main.js"></script>
+</body>
 </html>
