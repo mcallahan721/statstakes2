@@ -100,11 +100,22 @@ function resetPortfolio() {
   }
 }
 
+function useFallbackPlayers() {
+  players = [
+    { id: 1, name: "Fallback Mahomes", team: "KC", position: "QB", price: 45.5, availableShares: INITIAL_SUPPLY },
+    { id: 2, name: "Fallback Allen", team: "BUF", position: "QB", price: 39.2, availableShares: INITIAL_SUPPLY },
+    { id: 3, name: "Fallback Hurts", team: "PHI", position: "QB", price: 41.7, availableShares: INITIAL_SUPPLY }
+  ];
+  renderMarket();
+  renderPortfolio();
+}
+
 async function loadPlayers() {
   try {
     const res = await fetch(API_URL, {
       headers: { "Ocp-Apim-Subscription-Key": API_KEY }
     });
+    if (!res.ok) throw new Error("API returned status " + res.status);
     const data = await res.json();
 
     players = data
@@ -122,8 +133,9 @@ async function loadPlayers() {
     renderMarket();
     renderPortfolio();
   } catch (err) {
-    document.getElementById("market").innerHTML = "<p style='color:red;'>Failed to load player data.</p>";
-    console.error(err);
+    console.error("Failed to load live player data:", err);
+    document.getElementById("market").innerHTML = "<p style='color:red;'>⚠️ Live data failed to load. Showing fallback players.</p>";
+    useFallbackPlayers();
   }
 }
 
