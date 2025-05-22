@@ -1,0 +1,1 @@
+console.log('StatStakes app script loaded');
